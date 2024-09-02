@@ -1,0 +1,66 @@
+/* Các kiểu CSS khác đã có trước đó ... */
+
+/* Video Player Container */
+.video-player-container {
+    position: fixed;
+    top: 50% !important; /* Đặt giữa chiều dọc */
+    left: 50% !important; /* Đặt giữa chiều ngang */
+    transform: translate(-50%, -50%) !important; /* Căn giữa chính xác */
+    width: 80% !important; /* Chiều rộng 80% */
+    max-width: 640px !important; /* Giới hạn chiều rộng tối đa */
+    background-color: #000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 1001 !important;
+    border-radius: 8px !important; /* Bo tròn góc */
+}
+
+.video-player-container video {
+    width: 100% !important; /* Chiều rộng video bằng 100% của container */
+    height: auto !important; /* Để chiều cao tự động theo tỷ lệ video */
+    border-radius: 8px !important; /* Bo tròn góc cho video */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.video-player-container .controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 640px; /* Đặt giới hạn chiều rộng cho controls */
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.video-player-container .controls button,
+.video-player-container .controls input,
+.video-player-container .controls select {
+    background-color: #007BFF; /* Màu xanh dương chuyên nghiệp */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.video-player-container .controls button:hover,
+.video-player-container .controls input:hover,
+.video-player-container .controls select:hover {
+    background-color: #0056b3; /* Màu xanh dương đậm hơn khi hover */
+    transform: translateY(-2px); /* Tạo hiệu ứng nổi khi hover */
+}
+
+.video-player-container .controls #backBtn {
+    margin-left: auto;
+    background-color: #dc3545; /* Màu đỏ cho nút quay lại */
+}
+
+.video-player-container .controls #backBtn:hover {
+    background-color: #c82333; /* Màu đỏ đậm hơn khi hover */
+}
